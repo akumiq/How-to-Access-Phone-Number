@@ -22,6 +22,26 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Akses Telfon'),
+        ),
+        body: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                  Text('Call The Number',
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                  Padding(padding: const EdgeInsets.only(top: 16)),
+                  TextField(
+                      decoration: InputDecoration(
+                          hintText: 'Input Number Here',
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          prefixIcon: Icon(Icons.phone)))
+                ]))));
   }
 }
