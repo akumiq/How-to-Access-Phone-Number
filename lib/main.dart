@@ -34,14 +34,19 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                   Text('Call The Number',
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
                   Padding(padding: const EdgeInsets.only(top: 16)),
                   TextField(
                       decoration: InputDecoration(
                           hintText: 'Input Number Here',
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          prefixIcon: Icon(Icons.phone)))
+                          prefixIcon: Icon(Icons.phone))),
+                  Padding(padding: const EdgeInsets.only(top: 30)),
+                  FloatingActionButton(
+                      onPressed: null,
+                      child: Icon(Icons.phone, color: Colors.black),
+                      backgroundColor: Colors.lightBlue)
                 ]))));
   }
 }
